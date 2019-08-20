@@ -1,0 +1,13 @@
+# Site settings
+# Forked from skestelman.github.io. Thanks, Steph! 
+theme: jekyll-theme-minimal
+title: Caleb Wroblewski
+email: caleb.wroblewski@gmail.com
+Description: Academic website
+url: "http:///ckw.github.io" # the base hostname & protocol for this site
+permalink: /blog/:year/:month/:title.html
+gems:
+    - jekyll-sitemap
+
+# Build settings
+markdown: kramdown
