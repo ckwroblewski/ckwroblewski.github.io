@@ -46,8 +46,10 @@ a small {
 }
 
 .wrapper {
-  width:960px;
-  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 blockquote {
@@ -96,9 +98,9 @@ img {
 }
 
 header {
-  width:270px;
-  float:left;
-  position:fixed;
+  flex: 0 0 270px;
+  position: relative; /* Removed fixed positioning */
+  padding-right: 20px;
 }
 
 header ul {
@@ -160,9 +162,8 @@ header ul a strong {
 }
 
 section {
-  width:600px;
-  float:right;
-  padding-bottom:50px;
+  flex: 1;
+  padding-bottom: 50px;
 }
 
 small {
