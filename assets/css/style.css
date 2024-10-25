@@ -46,6 +46,8 @@ a small {
 }
 
 .wrapper {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -160,7 +162,6 @@ header ul a strong {
 }
 
 section {
-  margin-left: 290px; /* Moves the section to the right of the header */
   flex: 1;
   padding-bottom: 50px;
 }
@@ -196,11 +197,9 @@ footer {
     width:auto;
   }
 
-header {
-  width: 270px;
-  float: left;
-  padding-right: 20px;
-}
+  header {
+    padding-right:320px;
+  }
 
   section {
     border:1px solid #e5e5e5;
