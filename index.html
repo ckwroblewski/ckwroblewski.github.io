@@ -31,7 +31,33 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-  </head>
+  <style>
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.profile {
+  flex: 0 0 auto;
+  max-width: 220px;
+}
+
+.main-content {
+  flex: 1 1 600px;
+  min-width: 300px;
+}
+
+img.profile-pic {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+</style>
+</head>
       <body>   
 	<div class="wrapper">         
         <header>
@@ -41,14 +67,21 @@
         <h2><p class="view"><a href="https://ckwroblewski.github.io/research/wroblewski_cv_202410.pdf">CV</a></p></h2>
         <h2><p class="view"><a href="https://ckwroblewski.github.io/acknowledgments.html">Resources</a></p></h2>
   </header>
-      <section>       
-	  <p><p ><a style="color:black; font-size:115%; font-family: Arial, sans-serif;">I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
-	  research interests are in macroeconomics and public finance. I am particularly interested
-	  in the effects of monetary and tax policies on markets for capital goods. 
-		
-	  <p> You can contact me at caleb.wroblewski at gmail.com. </p>	 </a>     
-  	 
-   </section>
+      <section>
+<div class="profile">
+  <img src="image/headshot_close_up.jpg" alt="Caleb Wroblewski profile picture" class="profile-pic">
+</div>
+<div class="main-content">
+  <p style="font-size:115%; font-family: Arial, sans-serif;">
+    I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
+    research interests are in macroeconomics and public finance. I am particularly interested
+    in the effects of monetary and tax policies on markets for capital goods.
+  </p>
+  <p style="font-size:115%; font-family: Arial, sans-serif;">
+    You can contact me at caleb.wroblewski at gmail.com.
+  </p>
+</div>
+</section>
 
 <!-- Research section inlined -->
 <h2><p> Working Papers </h2></p>  
