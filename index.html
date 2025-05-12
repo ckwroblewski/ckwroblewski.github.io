@@ -32,16 +32,19 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
   
+
+
+
 <style>
-.container{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;}
-.sidebar{flex:0 0 280px;}
-.content{flex:1 1 0;min-width:300px;padding-left:0;}
-.sidebar img{
-  max-width:100%;
-  height:auto;
-  display:block;
-  border-radius:4px;
-  margin-top:15px;
+body{margin:0;font-family:Arial, sans-serif;line-height:1.4;}
+.container{display:flex;flex-wrap:wrap;align-items:flex-start;}
+.sidebar{flex:0 0 260px;padding:30px;}
+.content{flex:1 1 600px;min-width:320px;padding:30px 30px 30px 0;}
+.sidebar img{max-width:100%;height:auto;display:block;border-radius:4px;margin-top:15px;}
+.content h2{margin-top:0;}
+@media (max-width:900px){
+  .sidebar{flex:1 1 100%;text-align:center;}
+  .content{flex:1 1 100%;padding:20px;}
 }
 </style>
 
@@ -184,8 +187,8 @@ portfolios.
  
 </main>
 </div>
-
-<script>
+    
+  <script>
 function toggleAbstract(id) {
   const el = document.getElementById(id);
   if (el.style.display === "none") {
@@ -195,6 +198,5 @@ function toggleAbstract(id) {
   }
 }
 </script>
-
 </body>
 </html>
