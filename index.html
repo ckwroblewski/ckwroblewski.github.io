@@ -31,59 +31,34 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-  <style>
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.profile {
-  flex: 0 0 auto;
-  max-width: 220px;
-}
-
-.main-content {
-  flex: 1 1 600px;
-  min-width: 300px;
-}
-
-img.profile-pic {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-</style>
-</head>
+  </head>
       <body>   
 	<div class="wrapper">         
         <header>
   <h1><p class="view"><a href="https://ckwroblewski.github.io/">Caleb Wroblewski</a></p></h1>
-  <img src="image/headshot_close_up.jpg" width=217.3 height=341.3 alt="Caleb Wroblewski profile picture"><br>
         <h2><p class="view"><a href="https://ckwroblewski.github.io/">Home</a></p></h2>
         <h2><p class="view"><a href="https://ckwroblewski.github.io/research/wroblewski_cv_202410.pdf">CV</a></p></h2>
         <h2><p class="view"><a href="https://ckwroblewski.github.io/acknowledgments.html">Resources</a></p></h2>
   </header>
-      <section>
-<div class="profile">
-  <img src="image/headshot_close_up.jpg" alt="Caleb Wroblewski profile picture" class="profile-pic">
-</div>
-<div class="main-content">
-  <p style="font-size:115%; font-family: Arial, sans-serif;">
-    I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
-    research interests are in macroeconomics and public finance. I am particularly interested
-    in the effects of monetary and tax policies on markets for capital goods.
-  </p>
-  <p style="font-size:115%; font-family: Arial, sans-serif;">
-    You can contact me at caleb.wroblewski at gmail.com.
-  </p>
-</div>
-</section>
+      
 
-<!-- Research section inlined -->
+<section>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
+    <div style="flex: 0 0 auto; max-width: 220px;">
+      <img src="image/headshot_close_up.jpg" alt="Caleb Wroblewski profile picture" style="max-width: 100%; height: auto; display: block; border-radius: 4px;">
+    </div>
+    <div style="flex: 1 1 600px; min-width: 300px;">
+      <p style="font-size:115%; font-family: Arial, sans-serif;">
+        I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
+        research interests are in macroeconomics and public finance. I am particularly interested
+        in the effects of monetary and tax policies on markets for capital goods.
+      </p>
+      <p style="font-size:115%; font-family: Arial, sans-serif;">
+        You can contact me at caleb.wroblewski at gmail.com.
+      </p>
+      
+    
+
 <h2><p> Working Papers </h2></p>  
   <p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
   <a href="https://ckwroblewski.github.io/research/investment.pdf" style="margin:0; font-weight:bold">
@@ -98,6 +73,105 @@ img.profile-pic {
   estimate provides a powerful tool to discriminate between models with different frictions. The evidence favors models with external financing constraints, 
   while models with large real adjustment costs cannot match evidence from both interest rate and tax policy shocks.
 </div>
+
+<br><br><p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
+  <a href="https://ckwroblewski.github.io/research/LVT_draft.pdf" style="margin:0; font-weight:bold">The Incidence and Efficiency of Land Value Taxation</a><br> 
+  (with Ulf Nielsson and Anders Yding)
+  <br><a href="javascript:void(0);" onclick="toggleAbstract('abs1')">[+]Abstract</a>
+</p>
+<div id="abs1" style="display:none; margin-left:40px; font-family: Arial, sans-serif;">
+  Land value taxes are often seen as particularly desirable because the fixed supply of land implies no efficiency loss from taxation, 
+  with the entire tax burden falling on current landowners. We study the incidence and efficiency of land taxes using a unique quasi-experiment 
+  that generated persistent variation in land tax rates across Danish municipalities. In contrast to the predictions of standard, neoclassical 
+  models, we estimate a precise zero effect of land taxes on residential home prices. The precision of our estimates allows us to confidently rule 
+  out full capitalization of taxes into home prices using leading estimates of housing discount rates. Our results imply that the burden of land taxes 
+  is shared with tenants and future purchasers. We also estimate null effects of land taxes on measures of housing development, mobility, and homeownership, 
+  though we do find that older homeowners sort away from high tax areas. Our results are consistent with limited efficiency costs of land value taxation 
+  but imply that land taxes are more regressive in our setting than predicted by standard models.
+</div>
+   
+<br><br><p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
+  <a href="https://kristykim.github.io/assets/files/KristyKim_JMP.pdf" style="margin:0; font-weight:bold">From Pensions to Personnel: The Incentive Effects of Retirement Reform on Retention</a><br> 
+  (with Kristy Kim)
+  <br><a href="javascript:void(0);" onclick="toggleAbstract('abs2')">[+]Abstract</a>
+</p>
+<div id="abs2" style="display:none; margin-left:40px; font-family: Arial, sans-serif;">
+  Private retirement plans are a crucial part of worker’s compensation in the U.S. and have long been thought to influence labor supply. 
+  This study uses a cohort-based regression discontinuity design to examine how a change in the retirement plan at the largest U.S. employer, 
+  the Federal Government, impacted the retention of employees over the entire life cycle. We find that workers with less valuable employer 
+  pensions but more portable retirement benefits were more likely to separate from the government around 15 and 30 years after beginning federal 
+  service. We find smaller, statistically insignificant effects in the first few years of employment. We also find evidence that the effects are driven 
+  by highly productive workers, identified through supplemental compensation or early promotions. Our results suggest that employees respond to changes 
+  in the value of retirement benefits by leaving employers for better outside options, but that employees may be inattentive or job-locked early in their 
+  careers. These findings demonstrate that non-wage compensation impacts labor supply decisions across a worker's lifecycle and the distribution of human 
+  capital over time, particularly in labor markets where employers compete through diverse compensation structures.
+</div>
+
+   <br>
+
+  <hr>  	
+
+	<h2><p> Publications </h2></p>  
+  
+<p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
+  <a href="https://ckwroblewski.github.io/research/jimf_final.pdf" style="margin:0; font-weight:bold"> 
+  Home Country Interest Rates and International Investment in U.S. Bonds</a><br> 
+  (with John Ammer, Stijn Claessens, and Alexandra Tabova), 
+  <b><i>Journal of International Money and Finance</i></b>, 2019, (95): 212–227.
+  <br><a href="javascript:void(0);" onclick="toggleAbstract('abs3')">[+]Abstract</a>
+</p>
+<div id="abs3" style="display:none; margin-left:40px; font-family: Arial, sans-serif;">
+We analyze how interest rates affect cross-border portfolio investments. Data on U.S. bond holdings by foreign investors from 31 
+countries for the period 2003–2016 and a large variety in movements in interest rates in these countries provide for a unique way to 
+analyze shifts in investment behavior in response to interest rates. We find that low(er) interest rates, now prevailing in many advanced countries, 
+lead to greater investment in general into the United States, with the effects generally driven by investment in (higher yielding) corporate bonds, 
+rather than in Treasury bonds. In addition to affecting overall investments, lower interest rates at home are associated with a greater weight on corporate bonds, 
+consistent with search-for-yield. The results are economically important and robust to controlling for a number of country-specific macroeconomic and 
+financial conditions as well as to sample restrictions and choices of interest rate. Our findings have important policy implications in that they suggest 
+that low interest rates can lead to shifts in the volume and composition of overseas investments.
+
+</div>
+
+<br>
+
+  <hr>  	
+  
+  <h2><p> Resting Papers </h2></p>  
+
+<p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
+  <a href="https://ckwroblewski.github.io/research/actw_feb2019.pdf" style="margin:0; font-weight:bold"> 
+  Searching for Yield Abroad: Risk-Taking Through Foreign Investment in U.S. Bonds</a><br> 
+  (with John Ammer, Stijn Claessens, and Alexandra Tabova), February 2019
+  <br><a href="javascript:void(0);" onclick="toggleAbstract('abs4')">[+]Abstract</a>
+</p>
+<div id="abs4" style="display:none; margin-left:40px; font-family: Arial, sans-serif;">
+The much discussed risk-taking eects of low interest rates have been hard to doc-
+ument due to a paucity of data and challenges in identication. Analyzing unique,
+comprehensive, security-level data that capture 40 countries' entire investment in U.S.
+corporate bonds allows us to accurately characterize changes in riskiness and to help
+identify the causal mechanism. We show that declining home-country interest rates
+lead investors to tilt their portfolios toward riskier bonds in non-crises times. These
+changes occur entirely among investment-grade bonds. A 200 basis points decline leads
+investors to seek a 43 additional basis points yield pick-up, with eects that are even
+stronger when home interest rates reach very low levels. International spillovers of
+interest rates thus include risk taking that involves changes in the composition of bond
+portfolios.
+</div>
+  <br>
+    <hr>  
+
+	<h2><p> Policy Notes </h2></p>  
+
+  <p style="margin:0; font-size:115%; font-family: Arial, sans-serif;" }> <a href="https://ckwroblewski.github.io/research/atw_ifdp_note.pdf" style="margin:0; font-weight:bold"> 
+  "Low-for-Long" Interest Rates and Portfolio Shifts in Advanced Foreign Economies</a><br> (with John Ammer and Alexandra Tabova), December 2016
+  </p>
+  <br>
+ </div>								    
+<script src="scale_fix.js">
+</div>
+  </div>
+</section>
+
 
 <br><br><p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
   <a href="https://ckwroblewski.github.io/research/LVT_draft.pdf" style="margin:0; font-weight:bold">The Incidence and Efficiency of Land Value Taxation</a><br> 
