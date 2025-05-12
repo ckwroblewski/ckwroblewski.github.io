@@ -10,6 +10,7 @@
 
   gtag('config', 'G-WV3GT9VSGK');
 </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -23,35 +24,36 @@
 <link rel="canonical" href="https://ckwroblewski.github.io/" />
 <meta property="og:url" content="https://ckwroblewski.github.io/" />
 <meta property="og:site_name" content="Caleb Wroblewski" />
-<meta property="og:image" content="https://ckwroblewski.github.io/image/headshot.jpg" />
 <meta property="og:type" content="website" />
 <script type="application/ld+json">
-{"name":"Caleb Wroblewski","@type":"WebSite","url":"https://ckwroblewski.github.io/","headline":"Caleb Wroblewski","@context":"http://schema.org"}</script>
+{"name":"Stephanie Kestelman","@type":"WebSite","url":"https://skestelman.github.io/","headline":"Stephanie Kestelman","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
   </head>
+  <script>
+function toggleAbstract(id) {
+  const el = document.getElementById(id);
+  if (el.style.display === "none") {
+    el.style.display = "block";
+  } else {
+    el.style.display = "none";
+  }
+}
+</script>
       <body>   
 	<div class="wrapper">         
         <header>
   <h1><p class="view"><a href="https://ckwroblewski.github.io/">Caleb Wroblewski</a></p></h1>
   <img src="image/headshot_close_up.jpg" width=217.3 height=341.3 alt="Caleb Wroblewski profile picture"><br>
         <h2><p class="view"><a href="https://ckwroblewski.github.io/">Home</a></p></h2>
-        <h2><p class="view"><a href="https://ckwroblewski.github.io/research/wroblewski_cv_202410.pdf">CV</a></p></h2>
+		<h2><p class="view"><a href="https://ckwroblewski.github.io/research/wroblewski_cv_202410.pdf">CV</a></p></h2>        
+        <h2><p class="view"><a href="https://ckwroblewski.github.io/research.html">Research</a></p></h2>
         <h2><p class="view"><a href="https://ckwroblewski.github.io/acknowledgments.html">Resources</a></p></h2>
   </header>
-      <section>       
-	  <p><p ><a style="color:black; font-size:115%; font-family: Arial, sans-serif;">I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
-	  research interests are in macroeconomics and public finance. I am particularly interested
-	  in the effects of monetary and tax policies on markets for capital goods. 
-		
-	  <p> You can contact me at caleb.wroblewski at gmail.com. </p>	 </a>     
-  	 
-   </section>
-
-<!-- Research section inlined -->
-<h2><p> Working Papers </h2></p>  
+      <section>     
+  <h2><p> Working Papers </h2></p>  
   <p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
   <a href="https://ckwroblewski.github.io/research/investment.pdf" style="margin:0; font-weight:bold">
   The Interest Rate Elasticity of Investment: Micro Estimates and Macro Implications</a>
@@ -66,7 +68,7 @@
   while models with large real adjustment costs cannot match evidence from both interest rate and tax policy shocks.
 </div>
 
-<br><br><p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
+<p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
   <a href="https://ckwroblewski.github.io/research/LVT_draft.pdf" style="margin:0; font-weight:bold">The Incidence and Efficiency of Land Value Taxation</a><br> 
   (with Ulf Nielsson and Anders Yding)
   <br><a href="javascript:void(0);" onclick="toggleAbstract('abs1')">[+]Abstract</a>
@@ -82,7 +84,7 @@
   but imply that land taxes are more regressive in our setting than predicted by standard models.
 </div>
    
-<br><br><p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
+<p style="margin:0; font-size:115%; font-family: Arial, sans-serif;"> 
   <a href="https://kristykim.github.io/assets/files/KristyKim_JMP.pdf" style="margin:0; font-weight:bold">From Pensions to Personnel: The Incentive Effects of Retirement Reform on Retention</a><br> 
   (with Kristy Kim)
   <br><a href="javascript:void(0);" onclick="toggleAbstract('abs2')">[+]Abstract</a>
@@ -158,17 +160,20 @@ portfolios.
   "Low-for-Long" Interest Rates and Portfolio Shifts in Advanced Foreign Economies</a><br> (with John Ammer and Alexandra Tabova), December 2016
   </p>
   <br>
+
+	 </section>
  </div>								    
 <script src="scale_fix.js"></script>   
-  <script>
-function toggleAbstract(id) {
-  const el = document.getElementById(id);
-  if (el.style.display === "none") {
-    el.style.display = "block";
-  } else {
-    el.style.display = "none";
-  }
-}
-</script>
-</body>     
+<script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
+  </body>     
 </html>
