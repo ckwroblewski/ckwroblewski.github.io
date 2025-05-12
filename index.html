@@ -36,15 +36,14 @@
 
 
 <style>
-body{margin:0;font-family:Arial, sans-serif;line-height:1.4;}
+body{margin:0;font-family:Arial, sans-serif;line-height:1.5;}
 .container{display:flex;flex-wrap:wrap;align-items:flex-start;}
-.sidebar{flex:0 0 260px;padding:30px;}
-.content{flex:1 1 600px;min-width:320px;padding:30px 30px 30px 0;}
-.sidebar img{max-width:100%;height:auto;display:block;border-radius:4px;margin-top:15px;}
-.content h2{margin-top:0;}
-@media (max-width:900px){
-  .sidebar{flex:1 1 100%;text-align:center;}
-  .content{flex:1 1 100%;padding:20px;}
+.sidebar{flex:0 0 260px;margin-right:20px;padding:30px 0;}
+.content{flex:1 1 0;min-width:320px;}
+.sidebar img{max-width:100%;height:auto;display:block;border-radius:4px;margin-top:20px;}
+@media(max-width:900px){
+  .sidebar{flex:1 1 100%;margin-right:0;text-align:center;}
+  .content{flex:1 1 100%;margin-top:30px;padding:0 20px;}
 }
 </style>
 
@@ -60,11 +59,8 @@ body{margin:0;font-family:Arial, sans-serif;line-height:1.4;}
 </aside>
 <main class="content">
 
-      
-
 <section>
-  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
-    <div style="flex: 0 0 auto; max-width: 220px;"></div>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
     <div style="flex: 1 1 600px; min-width: 300px;">
       <p style="font-size:115%; font-family: Arial, sans-serif;">
         I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
@@ -114,7 +110,7 @@ body{margin:0;font-family:Arial, sans-serif;line-height:1.4;}
   <br><a href="javascript:void(0);" onclick="toggleAbstract('abs2')">[+]Abstract</a>
 </p>
 <div id="abs2" style="display:none; margin-left:40px; font-family: Arial, sans-serif;">
-  Private retirement plans are a crucial part of worker’s compensation in the U.S. and have long been thought to influence labor supply. 
+  Private retirement plans are a crucial part of worker's compensation in the U.S. and have long been thought to influence labor supply. 
   This study uses a cohort-based regression discontinuity design to examine how a change in the retirement plan at the largest U.S. employer, 
   the Federal Government, impacted the retention of employees over the entire life cycle. We find that workers with less valuable employer 
   pensions but more portable retirement benefits were more likely to separate from the government around 15 and 30 years after beginning federal 
@@ -125,7 +121,7 @@ body{margin:0;font-family:Arial, sans-serif;line-height:1.4;}
   capital over time, particularly in labor markets where employers compete through diverse compensation structures.
 </div>
 
-   <br>
+<br>
 
   <hr>  	
 
@@ -147,7 +143,6 @@ rather than in Treasury bonds. In addition to affecting overall investments, low
 consistent with search-for-yield. The results are economically important and robust to controlling for a number of country-specific macroeconomic and 
 financial conditions as well as to sample restrictions and choices of interest rate. Our findings have important policy implications in that they suggest 
 that low interest rates can lead to shifts in the volume and composition of overseas investments.
-
 </div>
 
 <br>
@@ -163,14 +158,13 @@ that low interest rates can lead to shifts in the volume and composition of over
   <br><a href="javascript:void(0);" onclick="toggleAbstract('abs4')">[+]Abstract</a>
 </p>
 <div id="abs4" style="display:none; margin-left:40px; font-family: Arial, sans-serif;">
-The much discussed risk-taking eects of low interest rates have been hard to doc-
-ument due to a paucity of data and challenges in identication. Analyzing unique,
+The much discussed risk-taking effects of low interest rates have been hard to document due to a paucity of data and challenges in identification. Analyzing unique,
 comprehensive, security-level data that capture 40 countries' entire investment in U.S.
 corporate bonds allows us to accurately characterize changes in riskiness and to help
 identify the causal mechanism. We show that declining home-country interest rates
 lead investors to tilt their portfolios toward riskier bonds in non-crises times. These
 changes occur entirely among investment-grade bonds. A 200 basis points decline leads
-investors to seek a 43 additional basis points yield pick-up, with eects that are even
+investors to seek a 43 additional basis points yield pick-up, with effects that are even
 stronger when home interest rates reach very low levels. International spillovers of
 interest rates thus include risk taking that involves changes in the composition of bond
 portfolios.
@@ -184,11 +178,13 @@ portfolios.
   "Low-for-Long" Interest Rates and Portfolio Shifts in Advanced Foreign Economies</a><br> (with John Ammer and Alexandra Tabova), December 2016
   </p>
   <br>
- 
+ </div>								    
+</section>
+
 </main>
 </div>
-    
-  <script>
+
+<script>
 function toggleAbstract(id) {
   const el = document.getElementById(id);
   if (el.style.display === "none") {
