@@ -38,9 +38,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #333;
   background-color: #fff;
+  font-size: 14px;
 }
 
 a {
@@ -52,67 +53,78 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Layout - mimicking Kelly Posenau's site */
+p {
+  margin: 0 0 16px 0;
+}
+
+/* Layout - more compact */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .sidebar {
-  flex: 0 0 350px;
-  padding: 20px 20px 20px 0;
+  flex: 0 0 240px;
+  padding-right: 30px;
 }
 
 .content {
   flex: 1;
-  padding: 20px 0 20px 20px;
+  padding-left: 0;
+  max-width: 700px;
 }
 
-/* Sidebar styles */
+/* Sidebar styles - more compact */
 .sidebar h1 {
   color: #4682B4;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-weight: normal;
 }
 
 .sidebar h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: normal;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .sidebar img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin: 20px 0;
+  border-radius: 0;
+  margin: 15px 0;
 }
 
-/* Content styles */
+/* Content styles - more compact */
 .content h2 {
-  font-size: 1.8rem;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.content h3 {
   font-size: 1.4rem;
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
 }
 
 /* Paper entries */
 .paper {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .paper a {
-  font-weight: bold;
+  font-weight: normal;
+}
+
+.paper-title {
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+.authors {
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .abstract-toggle {
@@ -127,17 +139,25 @@ a:hover {
   border-left: 3px solid #4682B4;
   margin-top: 5px;
   display: none;
+  font-size: 13px;
 }
 
 hr {
   border: 0;
   height: 1px;
   background-color: #e0e0e0;
-  margin: 30px 0;
+  margin: 25px 0;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 25px 0;
 }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
     padding: 15px;
@@ -145,18 +165,18 @@ hr {
   
   .sidebar {
     flex: 1 1 auto;
-    padding: 10px 0;
+    padding: 0 0 15px 0;
     text-align: center;
   }
   
   .content {
     flex: 1 1 auto;
-    padding: 20px 0 0 0;
+    padding: 15px 0 0 0;
   }
   
   .sidebar img {
     max-width: 200px;
-    margin: 20px auto;
+    margin: 15px auto;
   }
 }
 </style>
@@ -173,18 +193,18 @@ hr {
   </aside>
   
   <main class="content">
-    <p style="font-size:115%;">
+    <p>
       I am a Ph.D. student in the Economics Department at U.C. Berkeley. My 
       research interests are in macroeconomics and public finance. I am particularly interested
       in the effects of monetary and tax policies on markets for capital goods.
     </p>
-    <p style="font-size:115%;">
+    <p>
       You can contact me at caleb.wroblewski at gmail.com.
     </p>
     
     <h2>Working Papers</h2>  
     <div class="paper">
-      <p style="margin:0; font-size:115%;"> 
+      <p class="paper-title"> 
         <a href="https://ckwroblewski.github.io/research/investment.pdf">
         The Interest Rate Elasticity of Investment: Micro Estimates and Macro Implications</a>
         <br><a href="javascript:void(0);" onclick="toggleAbstract('abs0')" class="abstract-toggle">[+]Abstract</a>
@@ -200,9 +220,9 @@ hr {
     </div>
 
     <div class="paper">
-      <p style="margin:0; font-size:115%;"> 
+      <p class="paper-title"> 
         <a href="https://ckwroblewski.github.io/research/LVT_draft.pdf">The Incidence and Efficiency of Land Value Taxation</a><br> 
-        (with Ulf Nielsson and Anders Yding)
+        <span class="authors">(with Ulf Nielsson and Anders Yding)</span>
         <br><a href="javascript:void(0);" onclick="toggleAbstract('abs1')" class="abstract-toggle">[+]Abstract</a>
       </p>
       <div id="abs1" class="abstract-content">
@@ -218,9 +238,9 @@ hr {
     </div>
      
     <div class="paper">
-      <p style="margin:0; font-size:115%;"> 
+      <p class="paper-title"> 
         <a href="https://kristykim.github.io/assets/files/KristyKim_JMP.pdf">From Pensions to Personnel: The Incentive Effects of Retirement Reform on Retention</a><br> 
-        (with Kristy Kim)
+        <span class="authors">(with Kristy Kim)</span>
         <br><a href="javascript:void(0);" onclick="toggleAbstract('abs2')" class="abstract-toggle">[+]Abstract</a>
       </p>
       <div id="abs2" class="abstract-content">
@@ -236,16 +256,16 @@ hr {
       </div>
     </div>
 
-    <hr>
+    <div class="section-divider"></div>
 
     <h2>Publications</h2>  
     
     <div class="paper">
-      <p style="margin:0; font-size:115%;"> 
+      <p class="paper-title"> 
         <a href="https://ckwroblewski.github.io/research/jimf_final.pdf"> 
         Home Country Interest Rates and International Investment in U.S. Bonds</a><br> 
-        (with John Ammer, Stijn Claessens, and Alexandra Tabova), 
-        <b><i>Journal of International Money and Finance</i></b>, 2019, (95): 212–227.
+        <span class="authors">(with John Ammer, Stijn Claessens, and Alexandra Tabova), 
+        <i>Journal of International Money and Finance</i>, 2019, (95): 212–227.</span>
         <br><a href="javascript:void(0);" onclick="toggleAbstract('abs3')" class="abstract-toggle">[+]Abstract</a>
       </p>
       <div id="abs3" class="abstract-content">
@@ -260,15 +280,15 @@ hr {
       </div>
     </div>
 
-    <hr>
+    <div class="section-divider"></div>
     
     <h2>Resting Papers</h2>  
 
     <div class="paper">
-      <p style="margin:0; font-size:115%;"> 
+      <p class="paper-title"> 
         <a href="https://ckwroblewski.github.io/research/actw_feb2019.pdf"> 
         Searching for Yield Abroad: Risk-Taking Through Foreign Investment in U.S. Bonds</a><br> 
-        (with John Ammer, Stijn Claessens, and Alexandra Tabova), February 2019
+        <span class="authors">(with John Ammer, Stijn Claessens, and Alexandra Tabova), February 2019</span>
         <br><a href="javascript:void(0);" onclick="toggleAbstract('abs4')" class="abstract-toggle">[+]Abstract</a>
       </p>
       <div id="abs4" class="abstract-content">
@@ -285,14 +305,15 @@ hr {
       </div>
     </div>
     
-    <hr>
+    <div class="section-divider"></div>
 
     <h2>Policy Notes</h2>  
 
     <div class="paper">
-      <p style="margin:0; font-size:115%;"> 
+      <p class="paper-title"> 
         <a href="https://ckwroblewski.github.io/research/atw_ifdp_note.pdf"> 
-        "Low-for-Long" Interest Rates and Portfolio Shifts in Advanced Foreign Economies</a><br> (with John Ammer and Alexandra Tabova), December 2016
+        "Low-for-Long" Interest Rates and Portfolio Shifts in Advanced Foreign Economies</a><br> 
+        <span class="authors">(with John Ammer and Alexandra Tabova), December 2016</span>
       </p>
     </div>
   </main>
