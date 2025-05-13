@@ -24,30 +24,30 @@
       }
       
       .sidebar {
-        width: 340px;
+        width: 280px; /* Reduced from 340px */
         padding-top: 30px;
         padding-bottom: 30px;
-        padding-left: 40px;
-        padding-right: 30px;
+        padding-left: 30px; /* Reduced from 40px */
+        padding-right: 20px; /* Reduced from 30px */
         position: fixed;
         height: 100vh;
         overflow-y: auto;
         box-sizing: border-box;
-        border-right: 1px solid #eaecef; /* Subtle border */
+        border-right: 1px solid #eaecef;
       }
       
       .sidebar h1 {
         width: 100%;
         overflow: visible;
-        font-size: 32px; /* Larger name */
+        font-size: 28px; /* Reduced from 32px */
         margin-bottom: 15px;
       }
       
       .sidebar a {
         display: block;
-        margin-bottom: 10px; /* More space between nav links */
+        margin-bottom: 10px;
         color: #5c85c4;
-        font-size: 18px; /* Larger navigation links */
+        font-size: 20px; /* Increased from 18px */
         transition: color 0.2s;
       }
       
@@ -56,18 +56,18 @@
       }
       
       .sidebar img {
-        max-width: 80%; /* Smaller photo */
+        max-width: 100%; /* Increased from 80% to take full width */
         display: block;
-        margin: 25px auto; /* Center image with more margin */
-        border-radius: 4px; /* Slightly rounded corners */
+        margin: 25px auto;
+        border-radius: 4px;
       }
       
       .content {
-        margin-left: 410px;
+        margin-left: 330px; /* Adjusted from 410px */
         padding: 30px 40px 30px 0;
-        width: calc(100% - 410px);
+        width: calc(100% - 330px); /* Adjusted from 410px */
         max-width: 700px;
-        font-size: 17px; /* Increased font size for content */
+        font-size: 17px;
       }
       
       h1 {
@@ -79,7 +79,7 @@
       
       h2 {
         color: #24292e;
-        font-size: 24px; /* Increased size */
+        font-size: 24px;
         font-weight: 600;
         margin-top: 0;
         margin-bottom: 15px;
@@ -88,9 +88,9 @@
       
       h4 {
         color: #24292e;
-        font-size: 18px; /* Increased size */
+        font-size: 18px;
         font-weight: 600;
-        margin-top: 10px; /* Reduced space before section headers */
+        margin-top: 10px;
         margin-bottom: 12px;
       }
       
@@ -104,7 +104,7 @@
       }
       
       p {
-        line-height: 1.7; /* Improved line height for readability */
+        line-height: 1.7;
       }
       
       ul {
@@ -113,7 +113,7 @@
       }
       
       li {
-        margin-bottom: 12px; /* More space between papers */
+        margin-bottom: 12px;
         line-height: 1.5;
       }
       
@@ -126,15 +126,15 @@
         cursor: pointer;
         color: #5c85c4;
         display: inline-block;
-        font-size: 16px; /* Increased size */
-        padding: 2px 4px; /* Slight padding */
-        border-radius: 3px; /* Rounded corners */
+        font-size: 16px;
+        padding: 2px 4px;
+        border-radius: 3px;
         transition: background-color 0.2s;
       }
       
       .abstract-link:hover {
-        background-color: #f0f4f8; /* Light blue background on hover */
-        text-decoration: none; /* No underline on hover */
+        background-color: #f0f4f8;
+        text-decoration: none;
       }
       
       .abstract-content {
@@ -143,18 +143,18 @@
         background-color: #f6f8fa;
         border-left: 3px solid #dbe2ef;
         margin-top: 5px;
-        font-size: 16px; /* Increased size */
+        font-size: 16px;
         display: none;
-        transition: all 0.3s ease; /* Smooth transition */
+        transition: all 0.3s ease;
       }
       
       .paper-title {
         color: #5c85c4;
-        font-weight: 500; /* Slightly bolder */
+        font-weight: 500;
       }
       
       .co-authors {
-        font-size: 16px; /* Increased size */
+        font-size: 16px;
         margin-top: 2px;
         margin-bottom: 2px;
       }
