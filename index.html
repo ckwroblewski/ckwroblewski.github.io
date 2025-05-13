@@ -24,11 +24,11 @@
       }
       
       .sidebar {
-        width: 280px; /* Reduced from 340px */
+        width: 280px;
         padding-top: 30px;
         padding-bottom: 30px;
-        padding-left: 30px; /* Reduced from 40px */
-        padding-right: 20px; /* Reduced from 30px */
+        padding-left: 30px;
+        padding-right: 20px;
         position: fixed;
         height: 100vh;
         overflow-y: auto;
@@ -39,7 +39,7 @@
       .sidebar h1 {
         width: 100%;
         overflow: visible;
-        font-size: 28px; /* Reduced from 32px */
+        font-size: 28px;
         margin-bottom: 15px;
       }
       
@@ -47,7 +47,7 @@
         display: block;
         margin-bottom: 10px;
         color: #5c85c4;
-        font-size: 20px; /* Increased from 18px */
+        font-size: 20px;
         transition: color 0.2s;
       }
       
@@ -56,16 +56,16 @@
       }
       
       .sidebar img {
-        max-width: 100%; /* Increased from 80% to take full width */
+        max-width: 100%;
         display: block;
         margin: 25px auto;
         border-radius: 4px;
       }
       
       .content {
-        margin-left: 330px; /* Adjusted from 410px */
+        margin-left: 330px;
         padding: 30px 40px 30px 0;
-        width: calc(100% - 330px); /* Adjusted from 410px */
+        width: calc(100% - 330px);
         max-width: 700px;
         font-size: 17px;
       }
@@ -159,6 +159,17 @@
         margin-bottom: 2px;
       }
       
+      .co-author-link {
+        color: #5c85c4;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      .co-author-link:hover {
+        text-decoration: underline;
+        color: #3a5d9c;
+      }
+      
       .journal {
         font-weight: bold;
         font-style: italic;
@@ -246,7 +257,7 @@
               The Incidence and Efficiency of Land Value Taxation
             </a>
             <br>
-            <span class="co-authors">with Ulf Nielsson and Anders Yding</span>
+            <span class="co-authors">with <a href="https://sites.google.com/site/nielsson/home" class="co-author-link">Ulf Nielsson</a> and <a href="https://andersyding.com/" class="co-author-link">Anders Yding</a></span>
             <br>
             <a href="javascript:void(0);" class="abstract-link" onclick="toggleAbstract('abs2')">[+]Abstract</a>
             <div id="abs2" class="abstract-content">
@@ -266,7 +277,7 @@
               From Pensions to Personnel: The Incentive Effects of Retirement Reform on Retention
             </a>
             <br>
-            <span class="co-authors">with Kristy Kim</span>
+            <span class="co-authors">with <a href="https://kristykim.github.io/" class="co-author-link">Kristy Kim</a></span>
             <br>
             <a href="javascript:void(0);" class="abstract-link" onclick="toggleAbstract('abs3')">[+]Abstract</a>
             <div id="abs3" class="abstract-content">
@@ -290,7 +301,7 @@
               Home Country Interest Rates and International Investment in U.S. Bonds
             </a>
             <br>
-            <span class="co-authors">with John Ammer, Stijn Claessens, and Alexandra Tabova, <span class="journal">Journal of International Money and Finance</span>, 2019, (95): 212–227.</span>
+            <span class="co-authors">with <a href="https://www.federalreserve.gov/econres/john-ammer.htm" class="co-author-link">John Ammer</a>, <a href="https://som.yale.edu/faculty-research/faculty-directory/stijn-claessens" class="co-author-link">Stijn Claessens</a>, and <a href="https://www.federalreserve.gov/econres/alexandra-m-tabova.htm" class="co-author-link">Alexandra Tabova</a>, <span class="journal">Journal of International Money and Finance</span>, 2019, (95): 212–227.</span>
             <br>
             <a href="javascript:void(0);" class="abstract-link" onclick="toggleAbstract('abs4')">[+]Abstract</a>
             <div id="abs4" class="abstract-content">
@@ -313,7 +324,7 @@
               Searching for Yield Abroad: Risk-Taking Through Foreign Investment in U.S. Bonds
             </a>
             <br>
-            <span class="co-authors">with John Ammer, Stijn Claessens, and Alexandra Tabova, February 2019</span>
+            <span class="co-authors">with <a href="https://www.federalreserve.gov/econres/john-ammer.htm" class="co-author-link">John Ammer</a>, <a href="https://som.yale.edu/faculty-research/faculty-directory/stijn-claessens" class="co-author-link">Stijn Claessens</a>, and <a href="https://www.federalreserve.gov/econres/alexandra-m-tabova.htm" class="co-author-link">Alexandra Tabova</a>, February 2019</span>
             <br>
             <a href="javascript:void(0);" class="abstract-link" onclick="toggleAbstract('abs5')">[+]Abstract</a>
             <div id="abs5" class="abstract-content">
@@ -338,19 +349,33 @@
               "Low-for-Long" Interest Rates and Portfolio Shifts in Advanced Foreign Economies
             </a>
             <br>
-            <span class="co-authors">with John Ammer and Alexandra Tabova, December 2016</span>
+            <span class="co-authors">with <a href="https://www.federalreserve.gov/econres/john-ammer.htm" class="co-author-link">John Ammer</a> and <a href="https://www.federalreserve.gov/econres/alexandra-m-tabova.htm" class="co-author-link">Alexandra Tabova</a>, December 2016</span>
           </li>
         </ul>
       </div>
     </div>
     
     <script>
+      // Set the initial display state for all abstract containers on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        const abstractContainers = document.querySelectorAll('.abstract-content');
+        abstractContainers.forEach(function(container) {
+          container.style.display = 'none';
+        });
+      });
+      
       function toggleAbstract(id) {
         const el = document.getElementById(id);
-        if (el.style.display === "none") {
-          el.style.display = "block";
+        const currentDisplay = el.style.display;
+        
+        if (currentDisplay === 'none' || currentDisplay === '') {
+          el.style.display = 'block';
+          // Change the link text to indicate collapse option
+          event.target.textContent = '[-]Abstract';
         } else {
-          el.style.display = "none";
+          el.style.display = 'none';
+          // Change the link text to indicate expand option
+          event.target.textContent = '[+]Abstract';
         }
       }
     </script>
