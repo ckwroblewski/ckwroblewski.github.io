@@ -18,33 +18,68 @@
       }
       
       .container {
-        display: flex;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 30px 40px;
+        display: flex;
       }
       
       .sidebar {
-        width: 22%;
-        padding-right: 40px;
+        width: 340px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 30px;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+        border-right: 1px solid #eaecef; /* Subtle border */
+      }
+      
+      .sidebar h1 {
+        width: 100%;
+        overflow: visible;
+        font-size: 32px; /* Larger name */
+        margin-bottom: 15px;
+      }
+      
+      .sidebar a {
+        display: block;
+        margin-bottom: 10px; /* More space between nav links */
+        color: #5c85c4;
+        font-size: 18px; /* Larger navigation links */
+        transition: color 0.2s;
+      }
+      
+      .sidebar a:hover {
+        color: #3a5d9c;
+      }
+      
+      .sidebar img {
+        max-width: 80%; /* Smaller photo */
+        display: block;
+        margin: 25px auto; /* Center image with more margin */
+        border-radius: 4px; /* Slightly rounded corners */
       }
       
       .content {
-        width: 78%;
+        margin-left: 410px;
+        padding: 30px 40px 30px 0;
+        width: calc(100% - 410px);
+        max-width: 700px;
+        font-size: 17px; /* Increased font size for content */
       }
       
       h1 {
         color: #5c85c4;
-        font-size: 28px; /* Reduced from 32px to 28px */
         font-weight: 500;
         margin-top: 0;
-        margin-bottom: 10px;
-        white-space: nowrap; /* Prevents name breaking */
+        white-space: nowrap;
       }
       
       h2 {
         color: #24292e;
-        font-size: 22px;
+        font-size: 24px; /* Increased size */
         font-weight: 600;
         margin-top: 0;
         margin-bottom: 15px;
@@ -53,10 +88,10 @@
       
       h4 {
         color: #24292e;
-        font-size: 16px;
+        font-size: 18px; /* Increased size */
         font-weight: 600;
-        margin-top: 15px;
-        margin-bottom: 10px;
+        margin-top: 10px; /* Reduced space before section headers */
+        margin-bottom: 12px;
       }
       
       a {
@@ -68,17 +103,8 @@
         text-decoration: underline;
       }
       
-      .sidebar a {
-        display: block;
-        margin-bottom: 5px;
-        color: #5c85c4;
-        font-size: 15px;
-      }
-      
-      .sidebar img {
-        max-width: 100%;
-        display: block;
-        margin-top: 20px;
+      p {
+        line-height: 1.7; /* Improved line height for readability */
       }
       
       ul {
@@ -87,7 +113,7 @@
       }
       
       li {
-        margin-bottom: 8px;
+        margin-bottom: 12px; /* More space between papers */
         line-height: 1.5;
       }
       
@@ -100,7 +126,15 @@
         cursor: pointer;
         color: #5c85c4;
         display: inline-block;
-        font-size: 14px;
+        font-size: 16px; /* Increased size */
+        padding: 2px 4px; /* Slight padding */
+        border-radius: 3px; /* Rounded corners */
+        transition: background-color 0.2s;
+      }
+      
+      .abstract-link:hover {
+        background-color: #f0f4f8; /* Light blue background on hover */
+        text-decoration: none; /* No underline on hover */
       }
       
       .abstract-content {
@@ -109,17 +143,18 @@
         background-color: #f6f8fa;
         border-left: 3px solid #dbe2ef;
         margin-top: 5px;
-        font-size: 14px;
+        font-size: 16px; /* Increased size */
         display: none;
+        transition: all 0.3s ease; /* Smooth transition */
       }
       
       .paper-title {
         color: #5c85c4;
-        font-weight: normal;
+        font-weight: 500; /* Slightly bolder */
       }
       
       .co-authors {
-        font-size: 14px;
+        font-size: 16px; /* Increased size */
         margin-top: 2px;
         margin-bottom: 2px;
       }
@@ -129,18 +164,36 @@
         font-style: italic;
       }
       
+      .bio-divider {
+        height: 1px;
+        background-color: #e1e4e8;
+        margin: 25px 0;
+        width: 100%;
+      }
+      
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
         }
         
-        .sidebar, .content {
+        .sidebar {
+          position: relative;
           width: 100%;
-          padding-right: 0;
+          height: auto;
+          padding: 20px;
+          border-right: none;
+          border-bottom: 1px solid #eaecef;
+        }
+        
+        .content {
+          margin-left: 0;
+          width: 100%;
+          padding: 20px;
         }
         
         .sidebar img {
           max-width: 200px;
+          margin: 20px auto;
         }
       }
     </style>
@@ -165,6 +218,8 @@
         <p>
           You can contact me at caleb.wroblewski at gmail.com.
         </p>
+        
+        <div class="bio-divider"></div>
         
         <h2>Research</h2>
         
